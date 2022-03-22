@@ -47,6 +47,8 @@ func verify_location_list(loc_list : Location*, n_steps):
     verify_valid_location(loc=loc_list)
 
     if n_steps == 0:
+	# exercise:  verify that the last location is indeed (3, 3)
+	assert (loc_list.col - 2) * (loc_list.row - 2)= 1
         return ()
     end
 
@@ -94,11 +96,20 @@ func main{output_ptr: felt*}():
         Location(row=2, col=3),
         Location(row=3, col=3),
         )
+    local loc_tuple_fail3 : (Location, Location, Location, Location, Location) = (
+        Location(row=1, col=2),
+        Location(row=1, col=2),
+        Location(row=1, col=3),
+        Location(row=2, col=3),
+        Location(row=1, col=3),
+        )
 
     verify_location_list(
         loc_list=cast(&loc_tuple_fail1, Location*), n_steps=4)
     verify_location_list(
         loc_list=cast(&loc_tuple_fail2, Location*), n_steps=4)
+    verify_location_list(
+        loc_list=cast(&loc_tuple_fail3, Location*), n_steps=4)
 
     return ()
 end
