@@ -14,7 +14,7 @@ from starkware.cairo.common.cairo_builtins import BitwiseBuiltin
 #     cairo-run --program ex5.json --layout all --print_memory --print_info --print_output
 
 func main{output_ptr: felt*, range_check_ptr, bitwise_ptr : BitwiseBuiltin*}() -> ():
-	alloc_locals
+    alloc_locals
 
     let (region1: felt*) = alloc()   # input
     let (region2: felt*) = alloc()   # work area passed to hash function.
@@ -58,5 +58,5 @@ func main{output_ptr: felt*, range_check_ptr, bitwise_ptr : BitwiseBuiltin*}() -
     assert hash[6] = 0xa495991b
     assert hash[7] = 0x7852b855
 
-	return ()
+    return ()
 end

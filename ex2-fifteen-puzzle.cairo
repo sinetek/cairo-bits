@@ -47,8 +47,8 @@ func verify_location_list(loc_list : Location*, n_steps):
     verify_valid_location(loc=loc_list)
 
     if n_steps == 0:
-	# exercise:  verify that the last location is indeed (3, 3)
-	assert (loc_list.col - 2) * (loc_list.row - 2)= 1
+    # exercise:  verify that the last location is indeed (3, 3)
+    assert (loc_list.col - 2) * (loc_list.row - 2)= 1
         return ()
     end
 
