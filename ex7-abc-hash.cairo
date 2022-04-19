@@ -35,9 +35,6 @@ func main{output_ptr: felt*, range_check_ptr, bitwise_ptr : BitwiseBuiltin*}() -
     serialize_word([hash+6])
     serialize_word([hash+7])
 
-    # -hash value-
-    # e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-
     # NIST.1
     assert hash[0] = 0xba7816bf
     assert hash[1] = 0x8f01cfea
